@@ -40,23 +40,23 @@ const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           <Link
             to="/"
-            className="flex items-center gap-3 shrink-0"
+            className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 mr-2"
             onClick={closeMenu}
             aria-label="Prakash N Electricals - Home"
           >
             <img
               src={business.images.logo}
               alt="Prakash N Electricals"
-              className="h-11 w-11 md:h-12 md:w-12 object-contain rounded-lg"
+              className="h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 object-contain rounded-lg shrink-0"
             />
-            <div className="hidden sm:block">
-              <p className="text-lg font-bold text-primary leading-tight">
+            <div className="min-w-0">
+              <p className="text-sm sm:text-lg font-bold text-primary leading-tight truncate">
                 Prakash N
               </p>
-              <p className="text-xs font-semibold text-secondary tracking-wide uppercase">
+              <p className="text-[10px] sm:text-xs font-semibold text-secondary tracking-wide uppercase truncate">
                 Electricals
               </p>
             </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
 
           <button
             type="button"
-            className="lg:hidden p-2 rounded-lg text-primary hover:bg-primary/10 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-primary hover:bg-primary/10 transition-colors shrink-0"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
