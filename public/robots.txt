@@ -1,0 +1,17 @@
+# https://www.robotstxt.org/robotstxt.html
+# Prakash N Electricals — Electrical Spare Parts Wholesaler Mumbai
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://prakashnelectricals.com/sitemap.xml
