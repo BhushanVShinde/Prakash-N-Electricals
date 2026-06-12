@@ -17,6 +17,7 @@ const Navbar = () => {
   }, [])
 
   useEffect(() => {
+    
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
