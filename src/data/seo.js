@@ -9,7 +9,7 @@ export const SEO = {
   region: 'IN-MH',
   twitterCard: 'summary_large_image',
   twitterSite: '@prakashnelectricals',
-  defaultImage: `${business.website}/images/logo.svg`,
+  defaultImage: `${business.website}/images/logo.png`,
   defaultImageAlt: `${business.name} — ${'Electrical Spare Parts Wholesaler Mumbai'}`,
   geo: {
     region: 'IN-MH',

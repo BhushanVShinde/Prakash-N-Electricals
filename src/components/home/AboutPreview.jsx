@@ -13,10 +13,12 @@ const AboutPreview = () => {
           <ScrollAnimation animation="fade-right">
             <div className="relative">
               <div className="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-8 md:p-12 text-white">
-                <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mb-6">
-                  <svg viewBox="0 0 24 24" className="w-8 h-8 text-white" fill="currentColor">
-                    <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-                  </svg>
+                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 overflow-hidden p-2">
+                  <img
+                    src="/images/logo.png"
+                    alt={`${business.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Prakash N Electricals</h3>
                 <p className="text-white/80 leading-relaxed mb-6">

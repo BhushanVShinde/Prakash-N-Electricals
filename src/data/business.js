@@ -17,7 +17,7 @@ export const business = {
   whatsappUrl: 'https://wa.me/917666147345',
   website: 'https://prakashnelectricals.com',
   images: {
-    logo: '/images/logo.svg',
+    logo: '/images/logo.png',
     products: '/images/products',
     brands: '/images/brands',
   },
