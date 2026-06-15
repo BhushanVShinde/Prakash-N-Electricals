@@ -29,6 +29,10 @@ const iconMap = {
   led: HiOutlineSun,
   gland: HiOutlineLink,
   terminal: HiOutlineViewGrid,
+  conduit: HiOutlineLink,
+  tray: HiOutlineViewGrid,
+  db: HiOutlineTemplate,
+  panel: HiOutlineCollection,
 }
 
 const ProductCard = ({ product, index = 0 }) => {

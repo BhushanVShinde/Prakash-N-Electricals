@@ -1,45 +1,51 @@
 export const brands = [
   {
-    id: 'schneider',
-    name: 'Schneider Electric',
+    id: 'precision',
+    name: 'Precision PVC Conduit',
     description:
-      'Global leader in energy management and automation. Premium MCBs, MCCBs, contactors and industrial switchgear.',
-    color: '#3DCD58',
-  },
-  {
-    id: 'siemens',
-    name: 'Siemens',
-    description:
-      'German engineering excellence in circuit protection, motor control and automation components for industrial applications.',
-    color: '#009999',
-  },
-  {
-    id: 'abb',
-    name: 'ABB',
-    description:
-      'Trusted brand for low-voltage products, switchgear, contactors and power distribution solutions worldwide.',
-    color: '#FF000F',
-  },
-  {
-    id: 'havells',
-    name: 'Havells',
-    description:
-      "India's leading electrical brand offering wires, cables, switches, MCBs and complete home electrical solutions.",
-    color: '#0054A6',
-  },
-  {
-    id: 'finolex',
-    name: 'Finolex',
-    description:
-      'Renowned for high-quality PVC insulated wires and cables trusted by contractors and electricians across India.',
-    color: '#E31837',
+      'Trusted PVC conduit pipes, bends and wiring accessories engineered for durable and safe concealed electrical installations.',
+    color: '#E2231A',
+    logo: '/images/brands/precision.png',
   },
   {
     id: 'polycab',
-    name: 'Polycab',
+    name: 'Polycab Wires and Cables',
     description:
-      'Fastest growing wire and cable manufacturer offering a comprehensive range for power, control and communication.',
+      'Leading wire and cable manufacturer offering a comprehensive range for power, control and communication applications.',
     color: '#ED1C24',
+    logo: '/images/brands/polycab.png',
+  },
+  {
+    id: 'rr-kabel',
+    name: 'RR Kabel',
+    description:
+      'Premium wires and cables known for high conductivity, flame-retardant insulation and reliable performance.',
+    color: '#D71920',
+    logo: '/images/brands/rr-kabel.png',
+  },
+  {
+    id: 'goldmedal',
+    name: 'Goldmedal',
+    description:
+      'Modular switches, sockets, home automation and wiring accessories combining elegant design with safety.',
+    color: '#F7A800',
+    logo: '/images/brands/goldmedal.png',
+  },
+  {
+    id: 'norisys',
+    name: 'Norisys',
+    description:
+      'Designer modular switches and electrical accessories crafted for modern residential and commercial interiors.',
+    color: '#00A0E3',
+    logo: '/images/brands/norisys.png',
+  },
+  {
+    id: 'legrand',
+    name: 'Legrand',
+    description:
+      'Global specialist in electrical and digital building infrastructure including switches, protection and cable management.',
+    color: '#E2001A',
+    logo: '/images/brands/legrand.png',
   },
   {
     id: 'anchor',
@@ -47,12 +53,14 @@ export const brands = [
     description:
       'Panasonic group brand delivering modular switches, sockets, MCBs and wiring accessories for modern interiors.',
     color: '#003DA5',
+    logo: '/images/brands/anchor.png',
   },
   {
-    id: 'lt',
-    name: 'L&T',
+    id: 'lt-lk',
+    name: 'L&T (LK)',
     description:
       'Larsen & Toubro electrical products including switchgear, MCCBs, contactors and industrial automation solutions.',
     color: '#0066B3',
+    logo: '/images/brands/lt-lk.png',
   },
 ]

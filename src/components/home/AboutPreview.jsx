@@ -41,7 +41,7 @@ const AboutPreview = () => {
             />
             <ScrollAnimation animation="fade-up" delay={100}>
               <p className="text-gray-600 leading-relaxed mb-4">
-                At Prakash N Electricals, we specialise in wholesale supply of electrical components including wires and cables, circuit breakers, switches, contactors, relays and industrial accessories.
+                At Prakash N Electricals, we specialises in wholesale distribution of electrical construction material including pvc conduit pipes, wires and cables, Distribution Management System (DB, MCB, MCCB  ISOLATOR, RCCB), switches and sockets, LED Products, cable glands, and a comprehensive range of industrial electrical accessories.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 Whether you are working on a residential wiring project, a commercial building installation or an industrial automation panel, we provide the right products at the right price with prompt delivery across Mumbai.

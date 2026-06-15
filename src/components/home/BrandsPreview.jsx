@@ -16,19 +16,31 @@ const BrandsPreview = () => {
             subtitle="We stock and supply genuine products from India's most trusted electrical brands for every application."
           />
         </ScrollAnimation>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6 mb-12">
           {brands.map((brand, index) => (
             <ScrollAnimation key={brand.id} delay={index * 60} animation="scale">
-              <div className="bg-background rounded-xl p-5 text-center border border-gray-100 hover:shadow-md hover:border-primary/20 transition-all duration-300 group">
-                <div
-                  className="w-12 h-12 mx-auto rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform"
-                  style={{ backgroundColor: `${brand.color}15` }}
-                >
-                  <span className="text-lg font-black" style={{ color: brand.color }}>
-                    {brand.name.charAt(0)}
-                  </span>
+              <div className="h-full bg-white rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+                <div className="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] flex items-center justify-center mb-5 overflow-hidden">
+                  {brand.logo ? (
+                    <img
+                      src={brand.logo}
+                      alt={`${brand.name} logo`}
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                      style={{ backgroundColor: `${brand.color}15` }}
+                    >
+                      <span className="text-5xl font-black" style={{ color: brand.color }}>
+                        {brand.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                 </div>
-                <p className="text-sm font-bold text-primary">{brand.name}</p>
+                <p className="text-lg lg:text-xl font-bold text-primary leading-snug">
+                  {brand.name}
+                </p>
               </div>
             </ScrollAnimation>
           ))}

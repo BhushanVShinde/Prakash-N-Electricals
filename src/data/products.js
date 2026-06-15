@@ -40,20 +40,36 @@ export const products = [
     image: '/images/products/socket.jpg',
   },
   {
-    id: 'contactors',
-    name: 'Contactors',
+    id: 'pvc-conduit-pipes',
+    name: 'PVC Conduit Pipes',
     description:
-      'Electromagnetic contactors for motor control, HVAC systems and automation panels. Wide range of coil voltages and contact configurations.',
-    icon: 'contactor',
-    image: '/images/products/contactor.jpg',
+      'Rigid and flexible PVC conduit pipes, bends and accessories for safe concealed and surface electrical wiring in residential, commercial and industrial projects.',
+    icon: 'conduit',
+    image: '/images/products/conduit.jpg',
   },
   {
-    id: 'relays',
-    name: 'Relays',
+    id: 'cable-tray',
+    name: 'Perforated & Ladder Tray',
     description:
-      'Control relays, protection relays, timer relays and auxiliary relays for panel building, automation and electrical protection applications.',
-    icon: 'relay',
-    image: '/images/products/relay.jpg',
+      'Perforated cable trays, ladder type trays and raceways for organised cable routing and management across industrial and commercial installations.',
+    icon: 'tray',
+    image: '/images/products/cable-tray.jpg',
+  },
+  {
+    id: 'distribution-board',
+    name: 'Distribution Board',
+    description:
+      'Single and three phase distribution boards (DB) with MCB, MCCB, isolator and RCCB configurations for reliable power distribution and circuit protection.',
+    icon: 'db',
+    image: '/images/products/distribution-board.jpg',
+  },
+  {
+    id: 'panel-accessories',
+    name: 'Panel Accessories',
+    description:
+      'Bus bars, lugs, ferrules, terminal blocks, fuses and a complete range of panel building accessories for control and distribution panels.',
+    icon: 'panel',
+    image: '/images/products/panel-accessories.jpg',
   },
   {
     id: 'industrial-components',
@@ -78,13 +94,5 @@ export const products = [
       'Brass, nylon and stainless steel cable glands for secure cable entry, strain relief and IP-rated sealing in harsh environments.',
     icon: 'gland',
     image: '/images/products/cable-gland.jpg',
-  },
-  {
-    id: 'terminal-blocks',
-    name: 'Terminal Blocks',
-    description:
-      'DIN rail terminal blocks, barrier strips and connector blocks for organised wiring in control panels and distribution systems.',
-    icon: 'terminal',
-    image: '/images/products/terminal-block.jpg',
   },
 ]
