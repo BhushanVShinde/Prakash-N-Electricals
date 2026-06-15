@@ -12,8 +12,7 @@ import Button from '../components/Button'
 import { business, getPhoneLink, getWhatsAppLink } from '../data/business'
 
 const Contact = () => {
-  const mapQuery = encodeURIComponent(business.address.full)
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${mapQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed`
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${business.address.coords}&t=&z=16&ie=UTF8&iwloc=&output=embed`
 
   return (
     <>
@@ -117,9 +116,20 @@ const Contact = () => {
               </ScrollAnimation>
               <ScrollAnimation animation="fade-right" delay={100}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                  <div className="p-4 border-b border-gray-100">
-                    <h3 className="font-bold text-primary">Our Location</h3>
-                    <p className="text-sm text-gray-500 mt-1">Near Swami Samarth Mandir, Kandivali West</p>
+                  <div className="p-4 border-b border-gray-100 flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="font-bold text-primary">Our Location</h3>
+                      <p className="text-sm text-gray-500 mt-1">Near Swami Samarth Mandir, Kandivali West</p>
+                    </div>
+                    <a
+                      href={business.address.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-secondary transition-colors"
+                    >
+                      <HiLocationMarker className="w-4 h-4" />
+                      Get Directions
+                    </a>
                   </div>
                   <div className="aspect-video bg-gray-100 relative">
                     <iframe

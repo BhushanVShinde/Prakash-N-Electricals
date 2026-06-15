@@ -11,6 +11,8 @@ export const business = {
     line5: 'Kandivali West,',
     line6: 'Mumbai',
     full: 'D-05, Tapodhan CHS LTD, Plot No. 906, Charkop Sector 9, Near Swami Samarth Mandir, Kandivali West, Mumbai',
+    coords: '19.218000,72.822500',
+    mapsUrl: 'https://goo.gl/maps/UWY3iw146WxgX4Dt8',
   },
   gstin: '27CYZPP5865M1ZO',
   whatsapp: '917666147345',
