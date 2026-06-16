@@ -20,8 +20,9 @@ const Button = ({
     secondary:
       'bg-secondary text-white hover:bg-secondary/90 focus-visible:ring-secondary shadow-md hover:shadow-lg',
     outline:
-      'border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary',
-    ghost: 'text-primary hover:bg-primary/10 focus-visible:ring-primary',
+      'border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary dark:border-indigo-400 dark:text-indigo-300 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 dark:hover:text-white dark:focus-visible:ring-indigo-400',
+    ghost:
+      'text-primary hover:bg-primary/10 focus-visible:ring-primary dark:text-indigo-300 dark:hover:bg-indigo-500/15 dark:focus-visible:ring-indigo-400',
     whatsapp:
       'bg-[#25D366] text-white hover:bg-[#20bd5a] focus-visible:ring-[#25D366] shadow-md hover:shadow-lg',
   }
