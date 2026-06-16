@@ -4,6 +4,13 @@ import Button from '../Button'
 import ScrollAnimation from '../ScrollAnimation'
 import { business, getPhoneLink, getWhatsAppLink } from '../../data/business'
 
+const heroProducts = [
+  { label: 'MCB & MCCB', image: '/images/products/mcb.png' },
+  { label: 'Wires & Cables', image: '/images/products/wires.png' },
+  { label: 'PVC Conduit Pipes', image: '/images/products/conduit.png' },
+  { label: 'Switches', image: '/images/products/switch.png' },
+]
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-primary dark:bg-slate-900 min-h-[85vh] flex items-center transition-colors duration-300">
@@ -85,17 +92,20 @@ const Hero = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <div className="grid grid-cols-2 gap-4">
-                {['MCB & MCCB', 'Wires & Cables', 'PVC CONDUIT PIPES', 'Switches'].map((item) => (
+                {heroProducts.map((item) => (
                   <div
-                    key={item}
+                    key={item.label}
                     className="bg-white/10 rounded-xl p-4 text-center border border-white/10 hover:bg-white/20 transition-colors"
                   >
-                    <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-secondary/30 flex items-center justify-center">
-                      <svg viewBox="0 0 24 24" className="w-6 h-6 text-secondary" fill="currentColor">
-                        <path d="M13 2L3 14h7v8l10-12h-7V2z" />
-                      </svg>
+                    <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-white flex items-center justify-center overflow-hidden p-1.5">
+                      <img
+                        src={item.image}
+                        alt={item.label}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
                     </div>
-                    <p className="text-white text-sm font-semibold">{item}</p>
+                    <p className="text-white text-sm font-semibold">{item.label}</p>
                   </div>
                 ))}
               </div>
