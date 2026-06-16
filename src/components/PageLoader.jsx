@@ -5,7 +5,7 @@ const PageLoader = ({ children }) => {
   return (
     <Suspense
       fallback={
-        <div className="min-h-[60vh] flex items-center justify-center bg-background">
+        <div className="min-h-[60vh] flex items-center justify-center bg-background dark:bg-slate-900">
           <LoadingSpinner size="lg" />
         </div>
       }

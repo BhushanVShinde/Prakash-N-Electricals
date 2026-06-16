@@ -37,7 +37,7 @@ const About = () => {
   return (
     <>
       <MetaTags page="about" />
-      <section className="py-16 bg-primary">
+      <section className="py-16 bg-primary dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="max-w-2xl">
@@ -50,16 +50,16 @@ const About = () => {
           </ScrollAnimation>
         </div>
       </section>
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <ScrollAnimation animation="fade-right">
               <SectionHeading eyebrow="Who We Are" title="Prakash N Electricals" align="left" />
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-gray-600 dark:text-slate-300 leading-relaxed">
                 <p>
-                  <strong className="text-primary">Prakash N Electricals</strong> is a professionally managed
+                  <strong className="text-primary dark:text-white">Prakash N Electricals</strong> is a professionally managed
                   electrical spare parts wholesaler based in Charkop Sector 9, Kandivali West, Mumbai. Under the
-                  leadership of <strong className="text-primary">{business.owner}</strong>, we have established
+                  leadership of <strong className="text-primary dark:text-white">{business.owner}</strong>, we have established
                   ourselves as a dependable supply partner for the electrical trade community.
                 </p>
                 <p>
@@ -78,35 +78,35 @@ const About = () => {
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="fade-left" delay={100}>
-              <div className="bg-background rounded-2xl p-8 border border-gray-100">
-                <h3 className="text-xl font-bold text-primary mb-6">Business Information</h3>
+              <div className="bg-background dark:bg-slate-800 rounded-2xl p-8 border border-gray-100 dark:border-slate-700 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-primary dark:text-white mb-6">Business Information</h3>
                 <dl className="space-y-4">
                   <div className="flex gap-3">
                     <HiUserGroup className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     <div>
-                      <dt className="text-sm font-semibold text-primary">Owner</dt>
-                      <dd className="text-gray-600">{business.owner}</dd>
+                      <dt className="text-sm font-semibold text-primary dark:text-white">Owner</dt>
+                      <dd className="text-gray-600 dark:text-slate-300">{business.owner}</dd>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <HiShieldCheck className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     <div>
-                      <dt className="text-sm font-semibold text-primary">GSTIN</dt>
-                      <dd className="text-gray-600">{business.gstin}</dd>
+                      <dt className="text-sm font-semibold text-primary dark:text-white">GSTIN</dt>
+                      <dd className="text-gray-600 dark:text-slate-300">{business.gstin}</dd>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <HiLocationMarker className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     <div>
-                      <dt className="text-sm font-semibold text-primary">Location</dt>
-                      <dd className="text-gray-600">{business.address.full}</dd>
+                      <dt className="text-sm font-semibold text-primary dark:text-white">Location</dt>
+                      <dd className="text-gray-600 dark:text-slate-300">{business.address.full}</dd>
                     </div>
                   </div>
                   <div className="flex gap-3">
                     <HiLightBulb className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                     <div>
-                      <dt className="text-sm font-semibold text-primary">Specialisation</dt>
-                      <dd className="text-gray-600">
+                      <dt className="text-sm font-semibold text-primary dark:text-white">Specialisation</dt>
+                      <dd className="text-gray-600 dark:text-slate-300">
                         Electrical spare parts wholesale — residential, commercial & industrial
                       </dd>
                     </div>
@@ -117,7 +117,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <SectionHeading
@@ -129,12 +129,12 @@ const About = () => {
           <div className="grid sm:grid-cols-2 gap-6">
             {milestones.map((item, index) => (
               <ScrollAnimation key={item.title} delay={index * 80} animation="fade-up">
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 transition-all duration-300 dark:hover:scale-[1.03] dark:hover:border-indigo-500/50 dark:hover:shadow-[0_0_28px_rgba(79,70,229,0.35)]">
                   <div className="w-10 h-10 rounded-lg bg-secondary text-white flex items-center justify-center font-bold mb-4">
                     {index + 1}
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-lg font-bold text-primary dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-slate-300 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </ScrollAnimation>
             ))}

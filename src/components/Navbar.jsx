@@ -6,6 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { navLinks } from '../data/navLinks'
 import { business, getPhoneLink, getWhatsAppLink } from '../data/business'
 import Button from './Button'
+import ThemeToggle from './ThemeToggle'
 
 const HEADER_OFFSET = '96px'
 
@@ -30,7 +31,9 @@ const Navbar = () => {
 
   const linkClass = ({ isActive }) =>
     `text-sm font-semibold transition-colors duration-200 ${
-      isActive ? 'text-secondary' : 'text-gray-700 hover:text-primary'
+      isActive
+        ? 'text-secondary'
+        : 'text-gray-700 hover:text-primary dark:text-slate-300 dark:hover:text-white'
     }`
 
   const mobileMenu = createPortal(
@@ -47,10 +50,10 @@ const Navbar = () => {
         aria-label="Close menu"
       />
       <div
-        className="absolute left-0 right-0 bottom-0 bg-white shadow-xl overflow-y-auto overscroll-contain"
+        className="absolute left-0 right-0 bottom-0 bg-white dark:bg-slate-900 shadow-xl overflow-y-auto overscroll-contain transition-colors duration-300"
         style={{ top: HEADER_OFFSET, maxHeight: `calc(100dvh - ${HEADER_OFFSET})` }}
       >
-        <div className="flex flex-col gap-1 p-6 border-t border-gray-100 min-h-full bg-white pb-8">
+        <div className="flex flex-col gap-1 p-6 border-t border-gray-100 dark:border-slate-700 min-h-full bg-white dark:bg-slate-900 pb-8">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -58,8 +61,8 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `block px-4 py-3 rounded-lg text-base font-semibold transition-colors ${
                   isActive
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'bg-primary/10 text-primary dark:bg-indigo-500/15 dark:text-white'
+                    : 'text-gray-700 hover:bg-gray-50 dark:text-slate-300 dark:hover:bg-slate-800'
                 }`
               }
               onClick={closeMenu}
@@ -67,7 +70,7 @@ const Navbar = () => {
               {link.label}
             </NavLink>
           ))}
-          <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-gray-100">
+          <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-gray-100 dark:border-slate-700">
             <Button href={getPhoneLink(business.phones[0])} variant="outline" className="w-full">
               <HiPhone className="w-5 h-5" />
               Call {business.phones[0]}
@@ -94,10 +97,10 @@ const Navbar = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-300 ${
           isOpen
-            ? 'bg-white shadow-lg py-4'
+            ? 'bg-white dark:bg-slate-900 shadow-lg py-4'
             : isScrolled
-              ? 'bg-white/95 backdrop-blur-md shadow-lg py-4'
-              : 'bg-white py-5 shadow-sm'
+              ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg py-4'
+              : 'bg-white dark:bg-slate-900 py-5 shadow-sm dark:shadow-slate-950/40'
         }`}
       >
         <nav className="container mx-auto px-4 lg:px-8">
@@ -114,7 +117,7 @@ const Navbar = () => {
                 className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain rounded-lg shrink-0"
               />
               <div className="min-w-0">
-                <p className="text-lg sm:text-2xl md:text-3xl font-bold text-primary leading-tight truncate">
+                <p className="text-lg sm:text-2xl md:text-3xl font-bold text-primary dark:text-white leading-tight truncate transition-colors duration-300">
                   Prakash N
                 </p>
                 <p className="text-xs sm:text-sm md:text-base font-semibold text-secondary tracking-wider uppercase truncate">
@@ -132,6 +135,7 @@ const Navbar = () => {
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
+              <ThemeToggle />
               <Button href={getPhoneLink(business.phones[0])} variant="outline" size="sm">
                 <HiPhone className="w-4 h-4" />
                 Call
@@ -148,15 +152,18 @@ const Navbar = () => {
               </Button>
             </div>
 
-            <button
-              type="button"
-              className="lg:hidden p-2 rounded-lg text-primary hover:bg-primary/10 transition-colors shrink-0"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={isOpen}
-            >
-              {isOpen ? <HiX className="w-7 h-7" /> : <HiMenu className="w-7 h-7" />}
-            </button>
+            <div className="flex items-center gap-2 lg:hidden">
+              <ThemeToggle />
+              <button
+                type="button"
+                className="p-2 rounded-lg text-primary dark:text-white hover:bg-primary/10 dark:hover:bg-slate-800 transition-colors shrink-0"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? <HiX className="w-7 h-7" /> : <HiMenu className="w-7 h-7" />}
+              </button>
+            </div>
           </div>
         </nav>
       </header>

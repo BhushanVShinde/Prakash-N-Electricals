@@ -21,7 +21,7 @@ const iconMap = {
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background dark:bg-slate-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <ScrollAnimation animation="fade-up">
           <SectionHeading
@@ -35,12 +35,12 @@ const WhyChooseUs = () => {
             const Icon = iconMap[item.id] || HiShieldCheck
             return (
               <ScrollAnimation key={item.id} delay={index * 80} animation="fade-up">
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 h-full group">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
-                    <Icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
+                <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-slate-700 h-full group dark:hover:scale-[1.03] dark:hover:border-indigo-500/50 dark:hover:shadow-[0_0_28px_rgba(79,70,229,0.35)]">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 dark:bg-indigo-500/20 flex items-center justify-center mb-5 group-hover:bg-primary dark:group-hover:bg-indigo-600 transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-primary dark:text-indigo-400 group-hover:text-white dark:group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-3">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-lg font-bold text-primary dark:text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-slate-300 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </ScrollAnimation>
             )

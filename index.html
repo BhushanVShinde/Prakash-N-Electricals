@@ -70,6 +70,21 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Apply theme before paint to avoid a flash of the wrong theme
+      (function () {
+        try {
+          var stored = localStorage.getItem('pne-theme')
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          if (theme === 'dark') document.documentElement.classList.add('dark')
+        } catch (e) {}
+      })()
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

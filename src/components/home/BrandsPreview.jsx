@@ -7,7 +7,7 @@ import { brands } from '../../data/brands'
 
 const BrandsPreview = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <ScrollAnimation animation="fade-up">
           <SectionHeading
@@ -19,7 +19,7 @@ const BrandsPreview = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6 mb-12">
           {brands.map((brand, index) => (
             <ScrollAnimation key={brand.id} delay={index * 60} animation="scale">
-              <div className="h-full bg-white rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group">
+              <div className="h-full bg-white dark:bg-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group dark:hover:scale-[1.03] dark:hover:border-indigo-500/50 dark:hover:shadow-[0_0_28px_rgba(79,70,229,0.35)]">
                 <div className="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] flex items-center justify-center mb-5 overflow-hidden">
                   {brand.logo ? (
                     <img
@@ -38,7 +38,7 @@ const BrandsPreview = () => {
                     </div>
                   )}
                 </div>
-                <p className="text-lg lg:text-xl font-bold text-primary leading-snug">
+                <p className="text-lg lg:text-xl font-bold text-primary dark:text-white leading-snug">
                   {brand.name}
                 </p>
               </div>

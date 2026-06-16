@@ -8,7 +8,7 @@ const Products = () => {
   return (
     <>
       <MetaTags page="products" />
-      <section className="py-16 bg-primary">
+      <section className="py-16 bg-primary dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="max-w-2xl">
@@ -23,7 +23,7 @@ const Products = () => {
           </ScrollAnimation>
         </div>
       </section>
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background dark:bg-slate-900 transition-colors duration-300">
         <div className="container mx-auto px-4 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <SectionHeading

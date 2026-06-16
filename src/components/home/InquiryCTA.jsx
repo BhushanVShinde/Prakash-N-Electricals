@@ -6,7 +6,7 @@ import { business, getPhoneLink, getWhatsAppLink } from '../../data/business'
 
 const InquiryCTA = () => {
   return (
-    <section className="py-20 bg-primary relative overflow-hidden">
+    <section className="py-20 bg-primary dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>

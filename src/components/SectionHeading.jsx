@@ -21,16 +21,16 @@ const SectionHeading = ({
         </span>
       )}
       <h2
-        className={`text-3xl md:text-4xl font-bold leading-tight ${
-          light ? 'text-white' : 'text-primary'
+        className={`text-3xl md:text-4xl font-bold leading-tight transition-colors duration-300 ${
+          light ? 'text-white' : 'text-primary dark:text-white'
         }`}
       >
         {title}
       </h2>
       {subtitle && (
         <p
-          className={`max-w-2xl text-base md:text-lg leading-relaxed ${
-            light ? 'text-white/80' : 'text-gray-600'
+          className={`max-w-2xl text-base md:text-lg leading-relaxed transition-colors duration-300 ${
+            light ? 'text-white/80' : 'text-gray-600 dark:text-slate-300'
           } ${align === 'center' ? 'mx-auto' : ''}`}
         >
           {subtitle}

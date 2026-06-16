@@ -24,11 +24,11 @@ const FloatingWhatsApp = ({
         href={getWhatsAppLink(message)}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-transform duration-300 group"
+        className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:shadow-xl dark:shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:scale-110 active:scale-95 transition-transform duration-300 group"
         aria-label={label}
       >
         <FaWhatsapp className="w-7 h-7" aria-hidden="true" />
-        <span className="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none hidden sm:block">
+        <span className="absolute right-full mr-3 px-3 py-1.5 bg-gray-900 dark:bg-slate-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none hidden sm:block">
           {tooltip}
         </span>
       </a>

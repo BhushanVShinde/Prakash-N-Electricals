@@ -6,7 +6,7 @@ import { business, getPhoneLink, getWhatsAppLink } from '../../data/business'
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-primary min-h-[85vh] flex items-center">
+    <section className="relative overflow-hidden bg-primary dark:bg-slate-900 min-h-[85vh] flex items-center transition-colors duration-300">
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>

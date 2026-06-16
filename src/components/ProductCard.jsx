@@ -44,8 +44,8 @@ const ProductCard = ({ product, index = 0 }) => {
 
   return (
     <ScrollAnimation delay={index * 80} animation="fade-up">
-      <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
-        <div className="relative h-48 bg-gray-100 overflow-hidden">
+      <article className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-slate-700 flex flex-col h-full dark:hover:scale-[1.03] dark:hover:border-indigo-500/50 dark:hover:shadow-[0_0_28px_rgba(79,70,229,0.35)]">
+        <div className="relative h-48 bg-gray-100 dark:bg-slate-700 overflow-hidden">
           {showImage ? (
             <>
               {!imageLoaded && (
@@ -76,8 +76,8 @@ const ProductCard = ({ product, index = 0 }) => {
           </div>
         </div>
         <div className="p-6 flex flex-col flex-1">
-          <h3 className="text-xl font-bold text-primary mb-3">{product.name}</h3>
-          <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-6">{product.description}</p>
+          <h3 className="text-xl font-bold text-primary dark:text-white mb-3">{product.name}</h3>
+          <p className="text-gray-600 dark:text-slate-300 text-sm leading-relaxed flex-1 mb-6">{product.description}</p>
           <Button
             href={getWhatsAppLink(inquiryMessage)}
             target="_blank"

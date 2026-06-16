@@ -7,7 +7,7 @@ import { business } from '../../data/business'
 
 const AboutPreview = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollAnimation animation="fade-right">
@@ -40,10 +40,10 @@ const AboutPreview = () => {
               align="left"
             />
             <ScrollAnimation animation="fade-up" delay={100}>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-slate-300 leading-relaxed mb-4">
                 At Prakash N Electricals, we specialises in wholesale distribution of electrical construction material including pvc conduit pipes, wires and cables, Distribution Management System (DB, MCB, MCCB  ISOLATOR, RCCB), switches and sockets, LED Products, cable glands, and a comprehensive range of industrial electrical accessories.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-slate-300 leading-relaxed mb-8">
                 Whether you are working on a residential wiring project, a commercial building installation or an industrial automation panel, we provide the right products at the right price with prompt delivery across Mumbai.
               </p>
               <Link to="/about">
