@@ -7,7 +7,7 @@ import { navLinks } from '../data/navLinks'
 import { business, getPhoneLink, getWhatsAppLink } from '../data/business'
 import Button from './Button'
 
-const HEADER_OFFSET = '72px'
+const HEADER_OFFSET = '96px'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -94,10 +94,10 @@ const Navbar = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-300 ${
           isOpen
-            ? 'bg-white shadow-lg py-3'
+            ? 'bg-white shadow-lg py-4'
             : isScrolled
-              ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
-              : 'bg-white py-4 shadow-sm'
+              ? 'bg-white/95 backdrop-blur-md shadow-lg py-4'
+              : 'bg-white py-5 shadow-sm'
         }`}
       >
         <nav className="container mx-auto px-4 lg:px-8">
@@ -111,13 +111,13 @@ const Navbar = () => {
               <img
                 src={business.images.logo}
                 alt="Prakash N Electricals"
-                className="h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 object-contain rounded-lg shrink-0"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain rounded-lg shrink-0"
               />
               <div className="min-w-0">
-                <p className="text-sm sm:text-lg font-bold text-primary leading-tight truncate">
+                <p className="text-lg sm:text-2xl md:text-3xl font-bold text-primary leading-tight truncate">
                   Prakash N
                 </p>
-                <p className="text-[10px] sm:text-xs font-semibold text-secondary tracking-wide uppercase truncate">
+                <p className="text-xs sm:text-sm md:text-base font-semibold text-secondary tracking-wider uppercase truncate">
                   Electricals
                 </p>
               </div>

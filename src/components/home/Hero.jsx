@@ -76,9 +76,16 @@ const Hero = () => {
             </ScrollAnimation>
           </div>
           <ScrollAnimation animation="fade-left" delay={200} className="hidden lg:block">
+            <div className="flex justify-center mb-6">
+              <img
+                src={business.images.logo}
+                alt="Prakash N Electricals"
+                className="h-28 w-28 object-contain rounded-2xl bg-white p-3 shadow-xl"
+              />
+            </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <div className="grid grid-cols-2 gap-4">
-                {['MCB & MCCB', 'Wires & Cables', 'Contactors', 'Switches'].map((item) => (
+                {['MCB & MCCB', 'Wires & Cables', 'PVC CONDUIT PIPES', 'Switches'].map((item) => (
                   <div
                     key={item}
                     className="bg-white/10 rounded-xl p-4 text-center border border-white/10 hover:bg-white/20 transition-colors"
