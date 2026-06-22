@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { HiLightningBolt } from 'react-icons/hi'
 import { useTheme } from '../context/ThemeContext'
 
@@ -14,65 +14,16 @@ const SPARKS = [
 const ThemeToggle = ({ className = '' }) => {
   const { isDark, toggleTheme } = useTheme()
   const [animating, setAnimating] = useState(false)
-  const buttonRef = useRef(null)
-  const tooltipRef = useRef(null)
 
   const handleToggle = () => {
     setAnimating(true)
     toggleTheme()
     window.setTimeout(() => setAnimating(false), 500)
-
-    // #region agent log
-    ;(() => {
-      const post = (hypothesisId, message, data) =>
-        fetch('http://127.0.0.1:7452/ingest/1ea7c41a-338e-485c-a35d-90435abc08c6', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-Debug-Session-Id': 'c624f1' },
-          body: JSON.stringify({
-            sessionId: 'c624f1',
-            runId: 'run1',
-            hypothesisId,
-            location: 'ThemeToggle.jsx:handleToggle',
-            message,
-            data,
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {})
-      try {
-        const active = document.activeElement
-        post('A', 'focus state immediately after click', {
-          activeIsButton: active === buttonRef.current,
-          activeTag: active ? active.tagName : null,
-          hasFocusWithin: buttonRef.current
-            ? buttonRef.current.parentElement.matches(':focus-within')
-            : null,
-        })
-        post('C', 'pointer/hover capability', {
-          hoverNone: window.matchMedia('(hover: none)').matches,
-          pointerCoarse: window.matchMedia('(pointer: coarse)').matches,
-          hoverHover: window.matchMedia('(hover: hover)').matches,
-        })
-        window.setTimeout(() => {
-          const tip = tooltipRef.current
-          post('B', 'tooltip computed opacity ~200ms after click', {
-            opacity: tip ? getComputedStyle(tip).opacity : null,
-            stillFocusWithin: buttonRef.current
-              ? buttonRef.current.parentElement.matches(':focus-within')
-              : null,
-            parentHovered: buttonRef.current
-              ? buttonRef.current.parentElement.matches(':hover')
-              : null,
-          })
-        }, 200)
-      } catch (e) {}
-    })()
-    // #endregion
   }
 
   return (
     <div className={`group relative shrink-0 ${className}`}>
       <button
-        ref={buttonRef}
         type="button"
         onClick={handleToggle}
         role="switch"
@@ -117,11 +68,11 @@ const ThemeToggle = ({ className = '' }) => {
         />
       </button>
 
-      {/* Tooltip */}
+      {/* Tooltip — hover only on hover-capable devices, and keyboard focus only
+          (focus-visible) so a touch/mouse tap doesn't leave it stuck open */}
       <span
-        ref={tooltipRef}
         role="tooltip"
-        className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-gray-900 dark:bg-slate-700 px-2.5 py-1.5 text-xs font-semibold text-white opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0"
+        className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-gray-900 dark:bg-slate-700 px-2.5 py-1.5 text-xs font-semibold text-white opacity-0 translate-y-1 transition-all duration-200 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:translate-y-0 group-has-[:focus-visible]:opacity-100 group-has-[:focus-visible]:translate-y-0"
       >
         Switch Power Mode
       </span>
