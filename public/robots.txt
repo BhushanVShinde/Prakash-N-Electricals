@@ -14,4 +14,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap
-Sitemap: https://prakashnelectricals.com/sitemap.xml
+Sitemap: https://prakash-n-electricals.vercel.app/sitemap.xml
